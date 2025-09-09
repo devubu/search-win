@@ -37,7 +37,7 @@ Scripts for searching text.
 ## Create a backup of the profile
     Copy-Item -Path $PROFILE -Destination "$PROFILE.bak" -Force
 
-## If the profile doesn’t exist, create the it
+## If the profile doesn’t exist, create the file
     New-Item -ItemType File -Force -Path $PROFILE
 
 ### Open the profile
