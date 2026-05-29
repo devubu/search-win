@@ -56,7 +56,7 @@ Scripts for searching text.
     function cdfzf {
         param([string]$Path = ".")
     
-        $selected_dir = fd -a -uu -t d . $Path | fzf
+        $selected_dir = fd -a -u -t d . $Path | fzf
     
         if ($selected_dir) {
             Set-Location $selected_dir
@@ -66,13 +66,13 @@ Scripts for searching text.
     function ffzf {
         param([string]$Path = ".")
     
-        fd -a -uu -t f . $Path | fzf --preview='bat --color=always {}'
+        fd -a -u -t f . $Path | fzf --preview='bat --color=always {}'
     }
     
     function dfzf {
         param([string]$Path = ".")
     
-        fd -a -uu -t d . $Path | fzf --preview 'dir /a --color=always {}' --preview-window='~4,+{2}+4/3,<80(up),wrap'
+        fd -a -u -t d . $Path | fzf --preview 'dir /a --color=always {}' --preview-window='~4,+{2}+4/3,<80(up),wrap'
     }
     
     function copy {
